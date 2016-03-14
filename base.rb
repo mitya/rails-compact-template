@@ -1,8 +1,20 @@
-require 'rubygems'
-require 'bundler/setup'
 require 'pp'
+require 'bundler/inline'
+
+gemfile ENV['BUNDLE'] == 'yes' do
+   source 'https://rubygems.org'
+   ruby '2.3.0'
+   gem 'rails', '4.2.5.1'
+   gem 'sqlite3'
+   gem 'puma'
+   gem 'coffee-rails'
+   # gem 'shotgun'
+   # gem 'rerun'
+   # gem 'rb-fsevent'
+end
 
 require 'action_controller/railtie'
+require 'action_view/railtie'
 require "sprockets/railtie"
 
 class App < Rails::Application

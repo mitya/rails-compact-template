@@ -1,5 +1,9 @@
 The project contains a minimal rails app with all the application code in a single file (`app.rb`).
 
+Running the app for the first time (install the missing gems from the inline gemfile):
+
+    BUNDLE=yes rackup -p 3000
+
 Running (use only one of those commands):
 
     rackup -p 3000             # no autoreloading
